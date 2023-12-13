@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+      </style>
+    <title>0xByJBX | Index</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a class="logo" href="/">0xByJBX</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="nav-container sticky">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/cli.html">CLI</a>
+                    </li>
+                    <li class="navigation-item dropdown">
+                        <a class="navigation-link dropdown-toggle">Query?</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="query.html/coffee">Coffee</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation-item dropdown">
+                        <a class="navigation-link dropdown-toggle">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="emnotes.html">emNOTES</a></li>
+                            <li><a href="amfetamine.html">amfetamine</a></li>
+                            <li><a href="#">Abnormal Saline</a></li>
+                            <li><a href="trading.html">Trading</a></li>
+                            <li><a href="exchange.html">Exchange</a></li>
+                            <li><a href="khadas.html">Khadas</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/khadas.html">Contact </a>
+                    </li>
+    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <h1>Query?</h1>
+
+        <div>
+            <form action="" method="post">
+                <label for="query">What would you like to Query today?</label><br>
+                <input type="text" id="query" style="width: 100%;" placeholder="e.g. 'coffee'...">
+                <label for="keyWords">Any key words (you can also use Boolean operators)?</label>
+                <input type="text" id="keyWords" style="width: 100%;" placeholder="...cardiovascular disease, oesophageal cancer...">
+                <input type="button" value="Query">
+            </form>
+        </div>
+        <br>
+        <hr>
+
+        <section>
+
+            <article>
+                <select name="medication" id="drugSelect" style="font-family: 'IBM Plex Mono'; font-size: 12px;">
+
+                    <optgroup label="Circulation Drugs">
+                        <option selected label="Tranexamic Acid" aria-label="Tranexamic Acid" id="txa" value="txa">Tranexamic Acid</option>
+                    </optgroup>
+                    <optgroup label="Fluids">
+                        <option value="crystaloids">Crystaloids</option>
+                        <option value="colloids">Colloids</option>
+                        <option value="blood">Blood</option>
+                    </optgroup>
+                </select>
+            </article>
+        </section>
+    </main>
+
+    <br>
+    <aside id="root">aside</aside>
+    <br>
+    <footer>footer</footer>
+</body>
+<script>
+function Drug(name, details) {
+    this.name = name;
+    this.details = details;
+}
+
+Drug.prototype.toHTML = function() {
+    return `<div class="cont">
+        <h2 class="headTwo">${this.name}</h2>
+        <div class="wrap">
+            <div class="box">
+                <h3>Types</h3>
+                ${this.details.types.map(type => `<p>${type}</p>`).join('')}
+                <h3>Uses</h3>
+                <p>${this.details.uses}</p>
+                <h3>Routes</h3>
+                <p>${this.details.routes}</p>
+                <h3>Notes</h3>
+                <p>${this.details.notes}</p>
+                <h3>See also</h3>
+                <p>${this.details.seeAlso}</p>
+            </div>
+        </div>
+    </div>`;
+};
+
+const crystaloids = new Drug('Crystaloids', { types: ['Type1', 'Type2'], uses: 'Uses', routes: 'Routes', notes: 'Notes', seeAlso: 'See also' });
+const colloids = new Drug('Colloids', { types: ['Type1', 'Type2'], uses: 'Uses', routes: 'Routes', notes: 'Notes', seeAlso: 'See also' });
+const bloodProducts = new Drug('Blood products', { types: ['Type1', 'Type2'], uses: 'Uses', routes: 'Routes', notes: 'Notes', seeAlso: 'See also' });
+const txa = new Drug('Tranexamic Acid', { types: ['Type1', 'Type2'], uses: 'Uses', routes: 'Routes', notes: 'Notes', seeAlso: 'See also' });
+
+const drugs = {
+    fluids: {
+        crystaloids: crystaloids,
+        colloids: colloids,
+        blood: bloodProducts,
+    },
+    circulation: {
+        txa: txa
+    }
+}
+
+function updateDisplay() {
+    let selectedDrug = drugs.fluids[drugSelect.value] || drugs.circulation[drugSelect.value];
+    if (selectedDrug) {
+        root.innerHTML = selectedDrug.toHTML();
+    } else {
+        root.innerHTML = '<p>Selected drug information is not available.</p>';
+    }
+}
+drugSelect.addEventListener('change', updateDisplay);
+updateDisplay();
+
+
+
+
+
+</script>
+
+</html>

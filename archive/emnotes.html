@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <lnk rel="stylesheet" href="quizStyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+      </style>
+    <title>0xByJBX | EMNotes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a class="logo" href="/">EMNotes</a>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/cli.html">CLI</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/khadas.html">Khadas</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/amfetamine.html">Amfetamine</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/trading.html">Trading</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/emnotes.html">EMNotes</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/exchange.html">Exchange</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/quiz.html">Quiz</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <br>
+    <div class="card">
+        <div class="card_head" style="height: 30px; display: flex; ">
+            <span style="padding: 6px;"><strong style="margin: auto;">Choose a topic</strong>:</span>
+        </div>
+        <div class="card_body" style="height: 30px;">
+            <div style="display: flex; width: 100%; margin: auto; height: 50px;">
+                <select name="medication" id="select" style="font-family: 'IBM Plex Mono'; font-size: 12px; background-color: #ccf; color: ghostwhite;">
+                    <optgroup label="Circulation Drugs">
+                        <option selected label="Tranexamic Acid" aria-label="Tranexamic Acid" id="txa" value="txa">Tranexamic Acid</option>
+                    </optgroup>
+                    <optgroup label="Fluids">
+                        <option value="crystaloids">Crystaloids</option>
+                        <option value="colloids">Colloids</option>
+                        <option value="blood">Blood</option>
+                    </optgroup>
+                    <optgroup label="News">
+                        <option value="adhdMentalHealthToll">ADHD Mental Health Toll vs. Autism</option>
+                    </optgroup>
+                    <optgroup label="Medical Conditions">
+                        <option value="neurolepticMalignantDisease">Neuroleptic Malignant Disease</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="root" class="root">
+        <!-- Article content will be injected here -->
+        
+    </div><br>
+    <div id="quizContainer">
+        <!-- Quiz content will be injected here -->
+    </div><br>
+
+
+</main>
+    <script src="emnotes_script.js"></script>
+    <script src="quizScript.js"></script>
+
+</body>
+</html>

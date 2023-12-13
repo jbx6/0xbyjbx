@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+      </style>
+    <title>0xByJBX | Index</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a class="logo" href="/">_j${x}</a>
+            </div>
+            <span id="jsLamp"></span>
+        </div>
+        <div class="nav-container sticky">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/cars.html">🏎️</a>
+                    </li>
+                    <li class="navigation-item dropdown">
+                        <a class="navigation-link dropdown-toggle">Query?</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="query.html/coffee">Coffee</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation-item dropdown">
+                        <a class="navigation-link dropdown-toggle">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="calculators.html">Calculators</a></li>
+                            <li><a href="emnotes.html">emNOTES</a></li>
+                            <li><a href="amfetamine.html">amfetamine</a></li>
+                            <li><a href="#">Abnormal Saline</a></li>
+                            <li><a href="trading.html">Trading</a></li>
+                            <li><a href="exchange.html">Exchange</a></li>
+                            <li><a href="khadas.html">Khadas</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/contact.html">Contact</a>
+                    </li>
+    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap">
+            <span class="gas-oil-calculator-wrap-header-span">
+                <h2>Valuations</h2>
+            </span>
+            <div class="gas-oil-calculator-app">
+                <!--<div class="spanLeft">
+                    <span>
+                        <label for="valuation">Valuation</label>
+                    </span>
+                </div>-->
+                <textarea name="valuation" id="valuation" cols="" rows="3"></textarea>
+                <br>
+                <!---->
+                <div class="spanLeft">
+                    <span><label for="fdmc">FdMC</label></span>
+                    <input type="number" id="fdmc" placeholder="Enter the amount invested" required>
+                </div>
+
+                <!---->
+                <div class="spanLeft">
+                    <span><label for="tvl">TVL</label></span>
+                    <input type="number" id="tvl" placeholder="Enter the annual interest rate" required>
+                </div>
+
+                <!---->
+                <div class="spanLeft">
+                    <span><label for="revenue">Revenue</label></span>
+                    <input type="number" name="revenue" id="revenue" required>
+                </div>
+
+                <!---->
+                <div class="spanLeft">
+                    <span><label for="fees">Fees</label></span>
+                    <input type="number" id="fees" placeholder="Enter the duration in years" required>
+                </div>
+                
+                <!--<label>&nbsp;</label>-->
+
+
+                <button id="processValuation">Calculate</button>
+            </div>
+        </section>
+        <section class="wrap">
+            <span class="gas-oil-calculator-wrap-header-span">
+                <h2>Compound Investing</h2>
+            </span>
+            <div class="gas-oil-calculator-app">
+                <label for="amount">Amount Invested</label>
+                <input type="number" id="amount" placeholder="Enter the amount invested" required>
+
+                <label for="interest">Annual Interest Rate (APY %)</label>
+                <input type="number" id="interest" placeholder="Enter the annual interest rate" required>
+
+                <label for="duration">Duration (years)</label>
+                <input type="number" id="duration" placeholder="Enter the duration in years" required>
+                
+                <label>&nbsp;</label>
+                <label for="returns">Returns</label>
+                <input type="number" id="peroni" disabled style="color: ghostwhite;"><br>
+                <button id="processComp">Calculate</button>
+            </div>
+        </section>
+
+        <!--<section class="wrap">
+            <span class="gas-oil-calculator-wrap-header-span">
+                <h2>Crypto Inflation Calc.</h2>
+            </span>
+            <div class="gas-oil-calculator-app">
+                <label for="asset">Asset</label>
+                <input type="text" name="asset" id="asset">
+                <label for="currentSupply">Current Supply</label>
+                <input type="text" name="currentSupply" id="currentSupply">
+
+            </div>
+        </section>-->
+
+        <section class="wrap">
+            <span class="gas-oil-calculator-wrap-header-span">
+                <h2>MPG Calculator</h2>
+            </span>
+            <div class="gas-oil-calculator-app">
+                <label for="miles">Miles</label>
+                <input type="number" id="miles">
+                <label for="gallons">Gallons</label>
+                <input type="number" id="gallons">
+                <label>&nbsp;</label>
+                <label for="mpg">MPG</label>
+                <input type="number" id="mpg" disabled style="color: ghostwhite;"><br>
+                <button type="submit" id="calculateMPG">Calculate MPG</button>
+            </div>
+        </section>
+
+
+        <section class="wrap">
+            <span class="gas-oil-calculator-wrap-header-span">
+                <h2>Premix Calculator</h2>
+            </span>
+            <div class="gas-oil-calculator-app" id="app">
+                
+                <label for="liters" style="margin-bottom: -15px;">Liters</label><br>
+                <input type="number" name="liters" id="liters">
+                <label for="ratio" style="margin-bottom: -15px;">Ratio</label><br>
+                <div class="ratio">
+                    <input type="number" name="ratio" id="ratio"><span>:1</span>
+                </div>
+                <label>&nbsp;</label>
+                <label for="mix">Mix result (mL)</label>
+                <input name="mix" id="mix" disabled style="color: ghostwhite;"><br>
+                <button type="submit" id="submitMixCalc">Calculate</button>
+            </div>
+        </section>
+
+        
+        
+    </main>
+    <script src="calcScript.js">
+    </script>
+</body>
+
+
+</html>

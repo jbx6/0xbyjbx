@@ -1,0 +1,817 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #F6F6F6;
+    font-family: 'IBM Plex Mono';
+  }
+
+body {
+    font-family: 'IBM Plex Mono';
+    margin: 0 auto;
+    background-color: #f4f4f4;
+}
+
+.width-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.col-two-thirds {
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    place-items: center;
+    grid-gap: 1em;
+}
+.card {
+    background: #f4e6;
+}
+span.card-span {
+    hight: 60px;
+    display: block;
+    max-width: 100%;
+    background: lavender;
+    padding: 0.5em 1em 0.5em 1em;
+}
+p.date {
+    font-size: .7em;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+}
+
+p.desc {
+    font-size: .9em;
+    margin-bottom: 0;
+}
+p.note {
+    font-size: .8em;
+    margin-top: -10px;
+}
+
+a, p.text-link {
+    font-size: .9em;
+    margin: 0;
+}
+.content {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+h2.heading {
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+
+
+main {
+    background-color: whitesmoke;
+    margin: auto;
+}
+
+aside {
+    background-color: ghostwhite;
+}
+
+footer {
+    background-color: ghostwhite;
+}
+
+fieldset {
+    background-color: #ccf;
+    border: none;
+    border-radius: 2px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    font-family: 'IBM Plex Mono';
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: left;
+    color: black;
+    margin: 0;
+}
+  
+
+  
+  h3 {
+    font-size: .8rem;
+    width: fit-content;
+  }
+
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: black;
+    font-weight: 100;
+    text-align: justify;
+  }
+
+  select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-family: 'IBM Plex Mono';
+    border-radius: 2px;
+}
+
+table {
+    width: 100%;
+}
+
+thead, th {
+    font-weight: 400;
+}
+
+th, td {
+    padding: 1px;
+    border-radius: 1px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: #0E1117;
+}
+
+label {
+    padding: 2px;
+    font-weight: 600;
+}
+
+textarea {
+    background-color: #cff;
+}
+
+.primary {
+    background-color: aquamarine;
+}
+
+.danger {
+    background-color: red;
+}
+
+button:hover {
+    background-color: #ccf;
+    color: #0E1117;
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+
+.cont {
+    background-color: #fff;
+    padding: 20px;
+    border-radius:3px;
+
+    margin: 0px auto;
+
+}
+
+.contTrade {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.card_top {
+    background-color: #ededed;
+    padding: 1px;
+    border-radius: 3px;
+
+    margin: 0px auto;
+
+}
+
+
+
+
+
+
+.inputNumber {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.decrypt_input {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    background-color: #c6c6c6;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: text;
+}
+
+.decrypt_button {
+    width: 15%;
+    padding: 16px;
+    background-color: #444444;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.decrypt_output {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ededed;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: alias;
+}
+
+.decrypt_input:hover {
+
+}
+
+.decrypt_button:hover {
+    background-color: #555;
+}
+
+.decrypt_output:hover {
+    
+}
+
+
+
+
+.textarea_hash_input:hover {
+    background-color: #c9c9c9;
+}
+
+
+.textarea_hash {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ededed;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: alias;
+}
+.textarea_hash:hover {
+    background-color: #eaeaea;
+}
+
+.textarea_hash_input {
+    padding: 6px;
+    background-color: #c6c6c6;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: text;
+}
+
+.button_hash {
+    padding: 10px;
+    background-color: #444444;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+
+
+#exchange-result {
+    margin-top: 20px;
+}
+
+#exchange-result span {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+.typography {
+    font-family: 'IBM Plex Mono';
+}
+
+.header {
+    background-color: slateblue;
+}
+
+.header-container {
+    box-sizing: border-box;
+    
+    width: 80%;
+    height: 40px;
+    
+
+
+    display: flex;
+
+    line-height: 24px;
+}
+
+.logo {
+    color: tomato;
+    font-family: 'IBM Plex Mono';
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    margin: 8px;
+    line-height: 3rem;
+    
+}
+
+.nav-container {
+    box-sizing: border-box;
+    display: block;
+    background-color: lavender;
+}
+
+.sticky {
+    position: sticky;
+    top: 0
+}
+
+.navigation {
+    box-sizing: border-box;
+    display: flex;
+
+    font-size: 16px;
+
+    
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+
+    margin: auto;
+    padding: 9px;
+
+}
+
+.navigation-item {
+    box-sizing: border-box;
+    display: list-item;
+
+    margin-bottom: 0px;
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: black;
+    text-align: justify;
+    list-style-type: none;
+}
+
+.navigation-link {
+    cursor: pointer;
+    
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-family: 'IBM Plex Mono';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.navigation-link:hover {
+    text-decoration: underline;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.font {
+    font-family: 'IBM Plex Mono';
+    color: ghostwhite;
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+}
+
+.font_smaller {
+    font-family: 'IBM Plex Mono';
+    color: ghostwhite;
+    font-size: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+.grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.card {
+    margin: 0px;
+}
+
+.card_head {
+    padding: 6px;
+    border-radius: 2px 2px 0px 0px;
+    background-color: #353942;
+    color: ghostwhite;
+}
+
+
+.card_body {
+    padding: 9px;
+    border-radius: 0 0 2px 2px;
+    background-color: #0E1117;
+    color: ghostwhite;
+}
+
+details {
+    border-radius: 0px 0px 2px 2px;
+    background-color: #353942;
+    color: ghostwhite;
+
+}
+details[open] > summary {
+    background-color: #ccf;
+    color: #0E1117;
+}
+
+summary {
+    padding: 8px;
+    border-radius: 2px 2px 0px 0px;
+    background-color: #0E1117;
+    color: ghostwhite;
+    list-style-type: none;
+    cursor: pointer;
+}
+summary:hover {
+    background-color: #ccf;
+    color: #0E1117;
+}
+
+.question {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0;
+}
+
+.correctAnswer {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0;
+}
+
+.choices {
+    color: white;
+    font-size: 12px;
+    padding: 8px;
+    margin: auto; 
+}
+
+.explanation {
+    font-size: 12px;
+    color: white;
+    padding: 0px;
+    margin: 0;
+
+}
+
+.dropdown-menu a::before {
+    content: "❱";
+    font-size: 0.8em;
+    margin-right: 6px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.dropdown-toggle::after {
+    content: "▼";
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: lavender;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px lavender;
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.dropdown-menu a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    font-size: 0.8em;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.wrap {
+    display: grid;
+    place-content: center;
+    color: ghostwhite;
+    margin: 24px 0px 0px 0px;
+}
+
+.gas-oil-calculator-wrap p {
+    color: #ccf;
+    font-size: 16px;
+}
+
+
+.gas-oil-calculator-app {
+    display: flex;
+    flex-direction: column;
+    align-items: cener;
+    width: 300px;
+    background-color: #222;
+    padding: 24px;
+    color: #ccf;
+    font-size: 17px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.gas-oil-calculator-app button {
+    background-color: #ccf;
+    color: #0E1117;
+    border-radius: 5px;
+}
+
+.gas-oil-calculator-app button:hover {
+    background: #333;
+    color: #ccf;
+}
+
+.gas-oil-calculator-wrap-header-span h2 {
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #ccf;
+}
+
+
+
+
+.gas-oil-calculator-wrap-header-span {
+    width: 100%;
+    background: #0E1117;
+    height: 50px;
+
+    border-radius: 10px 10px 0px 0px;
+}
+
+.gas-oil-calculator-app input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    background: #777;
+}
+
+.gas-oil-calculator-app textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    background: #777;
+    color: ghostwhite;
+}
+
+.ratio {
+    display: flex;
+
+    border-radius: 0px 2px 2px 0px;
+}
+
+.ratio input {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: none;
+    background: #777;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.ratio span {
+    text-align: center;
+    padding: 5px;
+    width: 20px;
+    margin-left: -10px;
+    background: #333;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 14px;
+}
+
+.extraSpan {
+    display: flex;
+
+    border-radius: 0px 2px 2px 0px;
+}
+
+.extraSpan input {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: none;
+    background: #777;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.extraSpan span {
+    text-align: center;
+    padding: 5px;
+    width: 40px;
+    margin-left: -10px;
+    background: #333;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 14px;
+}
+
+.spanLeft {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 0px 2px 2px 0px;
+}
+
+.spanLeft input {
+    flex-grow: 1;
+    argin-right: 10px;
+    border: none;
+    background: #777;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.spanLeft span {
+    text-align: center;
+    padding: 10px;
+    idth: 40px;
+    argin-left: -10px;
+    background: #333;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 14px;
+}
+
+.spanLeft span label {
+    text-align: center;
+    padding: 5px;
+    idth: 40px;
+    argin-left: -10px;
+    background: #333;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.spanLeft textarea {
+    flex-grow: 1;
+    argin-right: 10px;
+    border: none;
+    background: #777;
+    border-radius: 0px 5px 5px 0px;
+}
+
+/*modal*/
+
+/* Button Styles */
+.feedback-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #0E1117;;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+.important {
+    color: rgb(208, 15, 15);
+    font-weight: bold;
+    text-decoration: underline;
+}

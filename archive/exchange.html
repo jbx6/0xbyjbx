@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+      </style>
+    <title>0xByJBX | EMNotes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="">
+                <a class="logo" href="/">0xByJBX</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/cli.html">CLI</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/khadas.html">Khadas</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/amfetamine.html">Amfetamine</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/trading.html">Trading</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/emnotes.html">EMNotes</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/exchange.html">Exchange</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <h1>Cryptocurrency Exchange</h1>
+    <br>
+
+<main>
+    <div class="container">
+
+        <form id="exchange-form">
+            <label for="fromCurrency">From:</label>
+            <select id="fromCurrency" name="fromCurrency">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="ETH">Ethereum (ETH)</option>
+                <option value="LTC">Litecoin (LTC)</option>
+            </select>
+            <input type="number" id="fromAmount" name="fromAmount" step="any" min="0" placeholder="Amount" class="inputNumber" required>
+            
+            <label for="toCurrency">To:</label>
+            <select id="toCurrency" name="toCurrency">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="ETH">Ethereum (ETH)</option>
+                <option value="LTC">Litecoin (LTC)</option>
+            </select>
+            <button type="submit">Exchange</button>
+        </form>
+        <div id="exchange-result">
+            <p>Exchange rate: <span id="exchange-rate"></span></p>
+            <p>Result: <span id="result"></span></p>
+        </div>
+    </div>
+
+    <script src="exchangeScript.js"></script>
+</main>
+</body>
+</html>

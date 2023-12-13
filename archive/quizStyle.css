@@ -1,0 +1,51 @@
+details {
+    border: 1px solid #aaaaaa3b;
+    border-radius: 0 0 4px 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+}
+
+  
+details > summary {
+    padding: 6px 6px;
+    background-color: #ccf;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+  
+  details[open] {
+    background-color: #ccf;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 0;
+}
+  
+  details[open] > summary {
+    background-color: #0E1117;
+    color: whitesmoke;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+  }
+
+  
+fieldset {
+    border: 1px solid #aaa;
+    border-radius: 0px;
+    padding: 0.5em;
+}
+
+legend {
+    border: 1px solid #0E1117;
+    border-radius: 0px;
+}
+
+#quizContainer{
+    height: 100px;
+    margin: auto;
+}

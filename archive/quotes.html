@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+      </style>
+    <title>0xByJBX | Index</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a class="logo" href="/">the pieces to put back together</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="nav-container sticky">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/cli.html">CLI</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/khadas.html">Khadas</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/amfetamine.html">Amfetamine</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/trading.html">Trading</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/emnotes.html">EMNotes</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/exchange.html">Exchange</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <h1 class="typography title">index</h1>
+    
+        <section>section
+            <article>article 1
+    
+            </article>
+    
+            <article>article 2
+                <select name="select" id="select" style="font-family: 'IBM Plex Mono'; font-size: 12px;">
+                    <optgroup label="Psychology Quotes">
+                        <option selected label="Post hoc ergo propter hoc" aria-label="Tranexamic Acid" id="postHoc" value="postHoc">Tranexamic Acid</option>
+                    </optgroup>
+                </select>
+            </article>
+        </section>
+    </main>
+    
+    <div id="root"></div>
+    
+<script>
+function Quote(name, details) {
+    this.name = name;
+    this.details = details;
+}
+
+Quote.prototype.toHTML = function() {
+    return `
+    <div class="cont">
+        <div class="card">
+            <header class="card_head">
+        <div class="header-container">
+          <span class="question">${this.name}</span>
+        </div> 
+      </header>
+      <div class="card_body">
+        <div class="correctAnswer">
+          <span class="explanation">${this.details}</span>
+        </div>
+        <div class="explanation">
+          <details>
+          <summary>Explanation</summary>
+            <ul>
+              <li>${this.details}</li>
+              <br>
+            </ul>  
+          </details>
+        </div>
+          <div>
+            <div style="display: flex; flex-direction: row-reverse;">
+              <button onclick="nextQuestion()">Next</button>
+            </div>
+          </div>
+      </div>
+        </div>
+        `
+    ;
+};
+
+const postHoc = new Quote('Post hoc ergo propter hoc', 
+`Post hoc ergo propter hoc <em>(Latin: 'after this, therefore because of this')</em> is an informal fallacy that states:<ul><li> "Since event Y followed event X, event Y must have been caused by event X."</li></ul> It is often shortened simply to <em>post hoc fallacy</em>.<br><br> A logical fallacy of the questionable cause variety, it is subtly different from the fallacy cum hoc ergo propter hoc ('with this, therefore because of this'), in which two events occur simultaneously or the chronological ordering is insignificant or unknown. <br><br>Post hoc is a logical fallacy in which one event seems to be the cause of a later event because it occurred earlier.<br><br>
+Post hoc is a particularly tempting error because correlation sometimes appears to suggest causality. The fallacy lies in a conclusion based solely on the order of events, rather than taking into account other factors potentially responsible for the result that might rule out the connection.
+<ul><li>A simple example is "The rooster crows immediately before sunrise; therefore the rooster causes the sun to rise."</li></ul>`);
+
+const quotes = {
+    postHoc: postHoc
+}
+
+function updateDisplay() {
+    const select = document.getElementById('select');
+    const root = document.getElementById('root');
+    
+    let selectedQuote = quotes[select.value];
+    if (selectedQuote) {
+        root.innerHTML = selectedQuote.toHTML();
+    } else {
+        root.innerHTML = '<p>Selected quote information is not available.</p>';
+    }
+}
+
+document.getElementById('select').addEventListener('change', updateDisplay);
+updateDisplay();
+
+
+
+
+
+
+</script>
+</body>
+</html>
